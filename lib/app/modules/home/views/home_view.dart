@@ -7,7 +7,7 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return GetBuilder(
         init: HomeController(),
@@ -15,18 +15,15 @@ class HomeView extends GetView<HomeController> {
         builder: (_) {
           return Scaffold(
             body: SizedBox.expand(child: controller.homeViews[controller.index.value]),
-            bottomNavigationBar:BottomNavigationBar(
-              onTap: (val)=>controller.indexChange(val),
+            bottomNavigationBar: BottomNavigationBar(
+              onTap: (val) => controller.indexChange(val),
               currentIndex: controller.index.value,
               unselectedItemColor: Colors.grey,
               selectedItemColor: Get.theme.primaryColor,
               showUnselectedLabels: true,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
-                  icon: RotatedBox(
-                    quarterTurns: 3,
-                    child: Icon(Icons.label_important_outline),
-                  ), // WatchList icon
+                  icon: RotatedBox(quarterTurns: 3, child: Icon(Icons.label_important_outline)), // WatchList icon
                   label: 'WatchList',
                 ),
                 BottomNavigationBarItem(

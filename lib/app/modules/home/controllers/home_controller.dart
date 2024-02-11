@@ -8,7 +8,9 @@ import 'package:treding/app/modules/home/views/profile_view.dart';
 
 class HomeController extends GetxController with GetSingleTickerProviderStateMixin {
   final List homeViews = [const WatchListView(), const OrdersView(), const PortfolioView(), const BidsView(), const ProfileView()];
-  List<String> titles = <String>['Favorites', 'List', 'F&O', 'Finance', 'Health'];
+  List<String> watchListTabs = <String>['Favorites', 'List', 'F&O', 'Finance', 'Health'];
+  List<String> ordersTabs = <String>['Open', 'Executed', 'GTT', 'Baskets', 'SIPs'];
+  List<String> portfolioTabs = <String>['Holdings', 'Positions', ];
   final index = 0.obs;
 
   //region WatchList
