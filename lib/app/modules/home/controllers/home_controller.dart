@@ -47,15 +47,7 @@ class HomeController extends GetxController
     tabController = TabController(length: 5, vsync: this);
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void indexChange(newIndex) {
     index.value = newIndex;
