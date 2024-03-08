@@ -16,7 +16,8 @@ class OrderStockListTile extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    decoration: BoxDecoration(color: Colors.grey.withOpacity(0.2)),
+                    decoration:
+                        BoxDecoration(color: Colors.grey.withOpacity(0.2)),
                     padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: const Text("OCO", style: TextStyle(fontSize: 14)),
                   ),
@@ -24,14 +25,16 @@ class OrderStockListTile extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(color: Colors.red.shade100),
                     padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: const Text("SELL", style: TextStyle(fontSize: 14, color: Colors.red)),
+                    child: const Text("SELL",
+                        style: TextStyle(fontSize: 14, color: Colors.red)),
                   ),
                 ],
               ),
               Container(
                 decoration: BoxDecoration(color: Colors.green.withOpacity(0.2)),
                 padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: const Text("ACTIVE", style: TextStyle(fontSize: 14, color: Colors.green)),
+                child: const Text("ACTIVE",
+                    style: TextStyle(fontSize: 14, color: Colors.green)),
               ),
             ],
           ),
@@ -45,19 +48,30 @@ class OrderStockListTile extends StatelessWidget {
           subtitle: Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0),
             child: RichText(
-              text: const TextSpan(text: 'Qty: ', style: TextStyle(color: Colors.grey, fontSize: 12), children: <TextSpan>[
-                TextSpan(text: '10', style: TextStyle(color: Colors.black, fontSize: 12)),
-              ]),
+              text: const TextSpan(
+                  text: 'Qty: ',
+                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: '10',
+                        style: TextStyle(color: Colors.black, fontSize: 12)),
+                  ]),
             ),
           ),
           trailing: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const Text("2924.50", style: TextStyle(color: Colors.green, fontSize: 14)),
+              const Text("2924.50",
+                  style: TextStyle(color: Colors.green, fontSize: 14)),
               RichText(
-                  text: const TextSpan(text: 'LTP: ', style: TextStyle(color: Colors.grey, fontSize: 14), children: <TextSpan>[
-                TextSpan(text: '0.00', style: TextStyle(color: Colors.black, fontSize: 14)),
-              ]))
+                  text: const TextSpan(
+                      text: 'LTP: ',
+                      style: TextStyle(color: Colors.grey, fontSize: 14),
+                      children: <TextSpan>[
+                    TextSpan(
+                        text: '0.00',
+                        style: TextStyle(color: Colors.black, fontSize: 14)),
+                  ]))
               // Text("+20.25(+0.73%)", style: TextStyle(fontSize: 14)),
             ],
           ),

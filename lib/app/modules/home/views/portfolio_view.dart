@@ -17,7 +17,12 @@ class PortfolioView extends GetView<HomeController> {
             appBar: AppBar(
               backgroundColor: const Color(0xFFebebed),
               title: const Text('Portfolio'),
-              actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.keyboard_arrow_down_outlined, size: 32, color: Colors.black))],
+              actions: [
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.keyboard_arrow_down_outlined,
+                        size: 32, color: Colors.black))
+              ],
               bottom: TabBar(
                 isScrollable: true,
                 onTap: (value) {
@@ -28,14 +33,18 @@ class PortfolioView extends GetView<HomeController> {
                 labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
                 indicatorSize: TabBarIndicatorSize.tab,
                 tabAlignment: TabAlignment.start,
-                tabs: controller.portfolioTabs.map((e) => Tab(text: e)).toList(),
+                tabs:
+                    controller.portfolioTabs.map((e) => Tab(text: e)).toList(),
               ),
             ),
             body: TabBarView(
               controller: controller.tabController,
               children: [
                 Container(
-                  decoration: const BoxDecoration(color: Colors.white, borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(24))),
                   child: ListView.builder(
                     itemCount: 50,
                     itemBuilder: (context, index) {
@@ -52,13 +61,15 @@ class PortfolioView extends GetView<HomeController> {
                                 IconButton(
                                   icon: const Icon(Icons.search),
                                   onPressed: () {},
-                                  visualDensity: const VisualDensity(horizontal: -4, vertical: -2),
+                                  visualDensity: const VisualDensity(
+                                      horizontal: -4, vertical: -2),
                                 ),
                                 // Filter icon
                                 IconButton(
                                   icon: const Icon(Icons.filter_list),
                                   onPressed: () {},
-                                  visualDensity: const VisualDensity(horizontal: -4, vertical: -2),
+                                  visualDensity: const VisualDensity(
+                                      horizontal: -4, vertical: -2),
                                 ),
                               ],
                             ),
@@ -84,7 +95,6 @@ class PortfolioView extends GetView<HomeController> {
               ],
             ),
           );
-        }
-    );
+        });
   }
 }

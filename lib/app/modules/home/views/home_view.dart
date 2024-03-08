@@ -15,7 +15,8 @@ class HomeView extends GetView<HomeController> {
         id: "Home",
         builder: (_) {
           return Scaffold(
-            body: SizedBox.expand(child: controller.homeViews[controller.index.value]),
+            body: SizedBox.expand(
+                child: controller.homeViews[controller.index.value]),
             bottomNavigationBar: BottomNavigationBar(
               onTap: (val) => controller.indexChange(val),
               currentIndex: controller.index.value,
