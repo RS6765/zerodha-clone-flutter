@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 import 'package:get/get.dart';
 
@@ -23,23 +24,23 @@ class HomeView extends GetView<HomeController> {
               showUnselectedLabels: true,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
-                  icon: RotatedBox(quarterTurns: 3, child: Icon(Icons.label_important_outline)), // WatchList icon
+                  icon: Icon(Icons.bookmark_border), // WatchList icon
                   label: 'WatchList',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_cart), // Orders icon
+                  icon: Icon(Icons.book), // Orders icon
                   label: 'Orders',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_bag_rounded), // Portfolio icon
+                  icon: Icon(FeatherIcons.shoppingBag), // Portfolio icon
                   label: 'Portfolio',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.attach_money), // Bids icon
+                  icon: Icon(FeatherIcons.airplay), // Bids icon
                   label: 'Bids',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.account_circle), // Profile icon
+                  icon: Icon(Icons.person_outline), // Profile icon
                   label: 'Profile',
                 ),
               ],
