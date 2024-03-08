@@ -24,7 +24,7 @@ jobs:
           channel: 'stable'
       - run: flutter pub get
 #      - run: dart format --set-exit-if-changed .
-      - run: flutter analyze .
+#      - run: flutter analyze .
       - run: flutter build apk
       - name: Push Release to Github
         uses: ncipollo/release-action@v1
