@@ -29,7 +29,7 @@ class OrdersView extends GetView<HomeController> {
                 onTap: (value) {
                   controller.update(["OrderList"]);
                 },
-                controller: controller.tabController,
+                controller: controller.ordersTabController,
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
                 indicatorSize: TabBarIndicatorSize.tab,
@@ -38,7 +38,7 @@ class OrdersView extends GetView<HomeController> {
               ),
             ),
             body: TabBarView(
-              controller: controller.tabController,
+              controller: controller.ordersTabController,
               children: [
                 Container(
                   decoration: const BoxDecoration(
@@ -88,25 +88,25 @@ class OrdersView extends GetView<HomeController> {
                 ),
                 Center(
                   child: Text(
-                    controller.ordersTabs[controller.tabController.index],
+                    controller.ordersTabs[controller.ordersTabController.index],
                     style: const TextStyle(fontSize: 20),
                   ),
                 ),
                 Center(
                   child: Text(
-                    controller.ordersTabs[controller.tabController.index],
+                    controller.ordersTabs[controller.ordersTabController.index],
                     style: const TextStyle(fontSize: 20),
                   ),
                 ),
                 Center(
                   child: Text(
-                    controller.ordersTabs[controller.tabController.index],
+                    controller.ordersTabs[controller.ordersTabController.index],
                     style: const TextStyle(fontSize: 20),
                   ),
                 ),
                 Center(
                   child: Text(
-                    controller.ordersTabs[controller.tabController.index],
+                    controller.ordersTabs[controller.ordersTabController.index],
                     style: const TextStyle(fontSize: 20),
                   ),
                 )

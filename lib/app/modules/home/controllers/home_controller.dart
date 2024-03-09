@@ -7,7 +7,7 @@ import 'package:treding/app/modules/home/views/portfolio_view.dart';
 import 'package:treding/app/modules/home/views/profile_view.dart';
 
 class HomeController extends GetxController
-    with GetSingleTickerProviderStateMixin {
+    with GetTickerProviderStateMixin {
   final List homeViews = [
     const WatchListView(),
     const OrdersView(),
@@ -33,10 +33,19 @@ class HomeController extends GetxController
     'Holdings',
     'Positions',
   ];
+
+  List<String> bidsTabs = <String>[
+    'Actions',
+    'IPO',
+    'Govt.Securities',
+  ];
   final index = 0.obs;
 
   //region WatchList
-  late TabController tabController;
+  late TabController watchListTabController;
+  late TabController ordersTabController;
+  late TabController portfolioTabController;
+  late TabController bidTabController;
   TextEditingController searchTEC = TextEditingController();
 
   //endregion
@@ -44,7 +53,10 @@ class HomeController extends GetxController
   @override
   void onInit() {
     super.onInit();
-    tabController = TabController(length: 5, vsync: this);
+    watchListTabController = TabController(length: 5, vsync: this);
+    ordersTabController = TabController(length: 5, vsync: this);
+    portfolioTabController = TabController(length: 2, vsync: this);
+    bidTabController = TabController(length: 3, vsync: this);
   }
 
 

@@ -29,19 +29,19 @@ class WatchListView extends GetView<HomeController> {
             ],
             bottom: TabBar(
               isScrollable: true,
-              onTap: (value) {
-                controller.update(["WatchList"]);
-              },
-              controller: controller.tabController,
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
               indicatorSize: TabBarIndicatorSize.tab,
               tabAlignment: TabAlignment.start,
+              onTap: (value) {
+                controller.update(["WatchList"]);
+              },
+              controller: controller.watchListTabController,
               tabs: controller.watchListTabs.map((e) => Tab(text: e)).toList(),
             ),
           ),
           body: TabBarView(
-            controller: controller.tabController,
+            controller: controller.watchListTabController,
             children: [
               Container(
                 decoration: const BoxDecoration(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
@@ -90,25 +90,25 @@ class WatchListView extends GetView<HomeController> {
               ),
               Center(
                 child: Text(
-                  controller.watchListTabs[controller.tabController.index],
+                  controller.watchListTabs[controller.watchListTabController.index],
                   style: const TextStyle(fontSize: 20),
                 ),
               ),
               Center(
                 child: Text(
-                  controller.watchListTabs[controller.tabController.index],
+                  controller.watchListTabs[controller.watchListTabController.index],
                   style: const TextStyle(fontSize: 20),
                 ),
               ),
               Center(
                 child: Text(
-                  controller.watchListTabs[controller.tabController.index],
+                  controller.watchListTabs[controller.watchListTabController.index],
                   style: const TextStyle(fontSize: 20),
                 ),
               ),
               Center(
                 child: Text(
-                  controller.watchListTabs[controller.tabController.index],
+                  controller.watchListTabs[controller.watchListTabController.index],
                   style: const TextStyle(fontSize: 20),
                 ),
               )

@@ -21,14 +21,14 @@ class PortfolioView extends GetView<HomeController> {
                 onTap: (value) {
                   controller.update(["Portfolio"]);
                 },
-                controller: controller.tabController,
+                controller: controller.portfolioTabController,
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
                 tabs: controller.portfolioTabs.map((e) => Tab(text: e)).toList(),
               ),
             ),
             body: TabBarView(
-              controller: controller.tabController,
+              controller: controller.portfolioTabController,
               children: const [
                 HoldingsView(),
                 PositionsView(),
