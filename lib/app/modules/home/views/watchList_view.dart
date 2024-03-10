@@ -63,7 +63,7 @@ class WatchListView extends GetView<HomeController> {
                       child: Container(
                         decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(5)), color: Colors.white),
                         child: Container(
-                          decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5), spreadRadius: 5, blurRadius: 7, offset: const Offset(0, 3))]),
+                          decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.grey.withOpacity(0.1), spreadRadius: 5, blurRadius: 7, offset: const Offset(0, 3))]),
                           child: Container(
                             decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(5)), color: Colors.white),
                             child: TextFormField(
@@ -72,12 +72,13 @@ class WatchListView extends GetView<HomeController> {
                                 controller.update(["Favorites"]);
                               },
                               decoration: InputDecoration(
-                                hintText: 'Search & Add',
+                                hintText: 'Search & add',
                                 border: InputBorder.none,
+                                hintStyle: const TextStyle(color: Colors.grey),
                                 prefixIcon: const Icon(Icons.search, color: Colors.grey),
                                 suffixIcon: Row(
                                   mainAxisSize: MainAxisSize.min,
-                                  children: [Text("${controller.searchTEC.text.length}/50", style: const TextStyle(color: Colors.grey)), const SizedBox(height: 25, child: VerticalDivider()), const Icon(Icons.stacked_bar_chart, color: Colors.grey), const SizedBox(width: 8)],
+                                  children: [Text("${controller.searchTEC.text.length}/50", style: const TextStyle(color: Colors.grey)), const SizedBox(height: 25, child: VerticalDivider()), Icon(Icons.stacked_bar_chart, color: Colors.grey.withOpacity(0.8)), const SizedBox(width: 8)],
                                 ),
                               ),
                             ),

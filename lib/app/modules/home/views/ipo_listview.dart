@@ -55,7 +55,7 @@ class IpoView extends StatelessWidget {
                           side: const BorderSide(color: Colors.transparent),
                           backgroundColor: Colors.blue.withOpacity(0.1),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 8,
                         ),
                         FilterChip(
@@ -70,7 +70,7 @@ class IpoView extends StatelessWidget {
                           side: const BorderSide(color: Colors.transparent),
                           selectedColor: Colors.blue.withOpacity(0.1),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 16,
                         ),
                       ],
@@ -85,7 +85,7 @@ class IpoView extends StatelessWidget {
               ],
             );
           } else {
-            return const IpoListTile();
+            return IpoListTile(index: index,);
           }
         },
       ),

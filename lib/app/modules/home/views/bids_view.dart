@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -52,10 +53,10 @@ class BidsView extends GetView<HomeController> {
 }
 
 class SecuritiesView extends StatelessWidget {
-  const SecuritiesView();
+  const SecuritiesView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Text("Securities");
+    return const Center(child: Text("No securities available for bidding",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),));
   }
 }
