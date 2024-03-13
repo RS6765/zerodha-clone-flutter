@@ -35,7 +35,7 @@ To install the Zerodha Kite Clone App, follow these steps:
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/yourusername/zerodha-kite-clone-app.git
+git clone https://github.com/DabhiNavaghan/zerodha-clone-flutter
 ```
 Navigate to the project directory:
 ```cd zerodha-kite-clone-app```
