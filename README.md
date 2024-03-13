@@ -27,3 +27,34 @@ Welcome to the Zerodha Kite Clone App! This is a trading application inspired by
 ## Introduction
 
 Zerodha Kite Clone App is a mobile application designed to provide a user-friendly interface for traders to access various trading features. It aims to replicate the functionalities of Zerodha Kite, allowing users to trade stocks, commodities, currencies, and more, all from the convenience of their mobile device.
+
+## Installation
+
+To install the Zerodha Kite Clone App, follow these steps:
+
+1. Clone the repository to your local machine:
+
+```
+git clone https://github.com/yourusername/zerodha-kite-clone-app.git
+```
+Navigate to the project directory:
+```cd zerodha-kite-clone-app```
+
+Install dependencies:
+```
+flutter pub get
+```
+
+Run the app:
+```
+flutter run
+```
+
+Usage
+To use the Zerodha Kite Clone App, simply launch the application on your mobile device. Sign in or create an account to start trading. Explore the various features such as market data, trading interface, watchlists, and portfolio tracking to enhance your trading experience.
+
+Contributing
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request. Together, we can make the Zerodha Kite Clone App even better.
+
+
+Feel free to customize the content according to your specific project details and requirements.
